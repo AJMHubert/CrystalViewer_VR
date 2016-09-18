@@ -1,5 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+//
+// Created by Jon on 23/08/2015.
+//
+
+#ifndef XYZ_UTILITIES_H
+#define XYZ_UTILITIES_H
+
+#include <string>
+#include <vector>
+#include <sstream>
+
+#include <regex>
+
+#include <cassert>
+#include <iostream>
+#include <Eigen/Dense>
+
+const double PI = 2*acos(0.0);
 
 //template <class T>
 //class Coord3D
@@ -18,56 +34,50 @@ using System.Collections.Generic;
 //    }
 //};
 
-public static class Utilities
+static struct Utilities
 {
-	public static List<string> split(string s, sbyte delim, List<string> elems)
-	{
-		std.stringstream ss = new std.stringstream(s);
-		string item;
-		while (getline(ss, item, delim))
-		{
-			elems.Add(item);
-		}
-		return elems;
-	}
+    static std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems) {
+        std::stringstream ss(s);
+        std::string item;
+        while (std::getline(ss, item, delim)) {
+            elems.push_back(item);
+        }
+        return elems;
+    }
 
 
-	public static List<string> split(string s, sbyte delim)
-	{
-		List<string> elems = new List<string>();
-		split(s, delim, elems);
-		return elems;
-	}
+    static std::vector<std::string> split(const std::string &s, char delim) {
+        std::vector<std::string> elems;
+        split(s, delim, elems);
+        return elems;
+    }
 
-//C++ TO C# CONVERTER TODO TASK: The original C++ template specifier was replaced with a C# generic specifier, which may not produce the same behavior:
-//ORIGINAL LINE: template <typename T>
-	public static int vectorSearch<T>(List<T> vec, T value)
-	{
-		int pos = std.find(vec.GetEnumerator(), vec.end(), value) - vec.GetEnumerator();
+    template <typename T>
+    static int vectorSearch(std::vector<T> vec, T value)
+    {
+        int pos = std::find(vec.begin(), vec.end(), value) - vec.begin();
 
 //        if (pos >= vec.size())
 //            return 0; // TODO: throw an error here
 //        else
-		return pos;
-	}
+        return pos;
+    }
 
-	public static double regexFindDoubleTag(string input, string pattern)
-	{
-		std.regex rgx = new std.regex(pattern);
-		std.smatch match = new std.smatch();
+    static double regexFindDoubleTag(std::string input, std::string pattern)
+    {
+        std::regex rgx(pattern);
+        std::smatch match;
 
-		if (!std.regex_search(input, match, rgx))
-		{
-			return 0.0; // TODO: throw error
-		}
+        if (!std::regex_search(input, match, rgx))
+            return 0.0; // TODO: throw error
 
-		return Convert.ToDouble((string)match[1]);
-	}
+        return std::stod(std::string(match[1]));
+    }
 
-	public static bool isCoordInRange(float x, float y, float z, float xs, float ys, float zs, float xf, float yf, float zf)
-	{
-		return (x >= xs != 0F && x <= xf != 0F && y >= ys != 0F && y <= yf != 0F && z >= zs != 0F && z <= zf);
-	}
+    static bool isCoordInRange(float x, float y, float z, float xs, float ys, float zs, float xf, float yf, float zf)
+    {
+        return ( x >= xs && x <= xf && y >= ys && y <= yf && z >= zs && z <= zf );
+    }
 
 
 //    template <typename T>
@@ -121,5 +131,6 @@ public static class Utilities
 //        }
 //    }
 
-}
+} Utilities;
 
+#endif //XYZ_UTILITIES_H
