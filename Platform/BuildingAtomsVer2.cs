@@ -12,8 +12,13 @@ public class BuildingAtomsVer2 : MonoBehaviour
     private ArrayList myNodes;
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
+
+    }
+    
+    public void ReadCrystalInfo()
+    {    
         //find number of lines in file
         int counter = 0;
         int numberoflines;
@@ -36,7 +41,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
         // Read the file and count the number of lines.
         System.IO.StreamReader file =
         //new System.IO.StreamReader(@"C:\Users\Alex\Documents\Play\Si.txt");
-        new System.IO.StreamReader(@"C:\Users\Alex\Documents\Work\Jon_PbSc\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
+        new System.IO.StreamReader(@"C:\Users\Alex\New folder (2)\OneDrive - University of Warwick\Work\Software_Development\CrystalViewer_VR\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
         while ((linedummy = file.ReadLine()) != null)
         {
             counter++;
@@ -483,11 +488,10 @@ public class BuildingAtomsVer2 : MonoBehaviour
             Debug.Log("Uniquefractot = " + Uniquefractot[i, 0] + " " + Uniquefractot[i, 1] + " " + Uniquefractot[i, 2]);
         }
 
-
-        double cosbeta = Math.Cos(CellBeta);
-        double cosalpha = Math.Cos(CellAlpha);
-        double cosgamma = Math.Cos(CellGamma);
-        double singamma = Math.Sin(CellGamma);
+        double cosbeta = Math.Cos(CellBeta*(Math.PI/180.0));
+        double cosalpha = Math.Cos(CellAlpha*(Math.PI/180.0));
+        double cosgamma = Math.Cos(CellGamma*(Math.PI/180.0));
+        double singamma = Math.Sin(CellGamma*(Math.PI/180.0));
 
         double vcoord = 1 - (cosalpha * cosalpha) - (cosbeta * cosbeta) - (cosgamma * cosgamma)
             + (2 * cosalpha * cosbeta * cosgamma);
