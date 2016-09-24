@@ -18,6 +18,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
         int counter = 0;
         int numberoflines;
         string linedummy;
+	string JJ test;
 
         string[] periodictable = {"H","He" ,"Li", "Be", "B", "C",  "N",  "O",  "F",
                 "Ne", "Na", "Mg", "Al", "Si", "P",  "S",  "Cl", "Ar", "K",
