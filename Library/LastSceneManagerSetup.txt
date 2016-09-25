@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scene/Build 0.1 CrystalViewer.unity
-  isLoaded: 1
-  isActive: 1
