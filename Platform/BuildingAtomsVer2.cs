@@ -12,17 +12,13 @@ public class BuildingAtomsVer2 : MonoBehaviour
     private ArrayList myNodes;
 
     // Use this for initialization
-    public void Start()
+    void Start()
     {
-
-    }
-    
-    public void ReadCrystalInfo()
-    {    
         //find number of lines in file
         int counter = 0;
         int numberoflines;
         string linedummy;
+	
 
         string[] periodictable = {"H","He" ,"Li", "Be", "B", "C",  "N",  "O",  "F",
                 "Ne", "Na", "Mg", "Al", "Si", "P",  "S",  "Cl", "Ar", "K",
@@ -41,7 +37,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
         // Read the file and count the number of lines.
         System.IO.StreamReader file =
         //new System.IO.StreamReader(@"C:\Users\Alex\Documents\Play\Si.txt");
-        new System.IO.StreamReader(@"C:\Users\Alex\New folder (2)\OneDrive - University of Warwick\Work\Software_Development\CrystalViewer_VR\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
+        new System.IO.StreamReader(@"C:\Users\JJ\Documents\Alex_crystal_project\CrystalViewer_VR_scripts\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
         while ((linedummy = file.ReadLine()) != null)
         {
             counter++;
@@ -61,7 +57,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
             CellAlpha = 0.0F, CellBeta = 0.0F, CellGamma = 0.0F;
 
         // Read in unit cell characteristics
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Alex\Documents\Work\Jon_PbSc\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
+        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\JJ\Documents\Alex_crystal_project\CrystalViewer_VR_scripts\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
         foreach (string line1 in lines)
         {
             string[] text = System.Text.RegularExpressions.Regex.Split(line1, @"\s+");
@@ -487,6 +483,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
             Uniquefractot[i, 2] = Uniquefrac[i, 2];
             Debug.Log("Uniquefractot = " + Uniquefractot[i, 0] + " " + Uniquefractot[i, 1] + " " + Uniquefractot[i, 2]);
         }
+
 
         double cosbeta = Math.Cos(CellBeta*(Math.PI/180.0));
         double cosalpha = Math.Cos(CellAlpha*(Math.PI/180.0));
