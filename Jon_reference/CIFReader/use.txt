@@ -1,4 +1,0 @@
-CIFReader cif(file_path);
-UnitCell cell = cif.getUnitCell();
-CellGeometry geom  = cell.getCellGeometry();
-std::vector<AtomSite> atoms = cell.getAtoms();
