@@ -1,13 +1,13 @@
 #Summary
 
 
-#Why
+Why
 
 
-#Implementation
+Implementation
 
 
-#TODO
+TODO
 
 
 
