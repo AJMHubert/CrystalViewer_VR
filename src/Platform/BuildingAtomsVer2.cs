@@ -4,16 +4,39 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEditor;
 
 
 public class BuildingAtomsVer2 : MonoBehaviour
 {
     private GameObject atom;
     private ArrayList myNodes;
+//added UnityEditor above, also the below script SHOULD open a dialogue box that allows file selection but does not work as yet.
+public class OpenFilePanelExample : EditorWindow
+{
+	[MenuItem( "Example/Overwrite Texture" )]
+	static void Apply( )
+	{
+		Texture2D texture = Selection.activeObject as Texture2D;
+		if( texture == null )
+		{
+			EditorUtility.DisplayDialog( "Select Texture", "You must select a texture first!", "OK" );
+			return;
+		}
 
+		string path = EditorUtility.OpenFilePanel( "Overwrite with png", "", "png" );
+		if( path.Length != 0 )
+		{
+			WWW www = new WWW( "file:///" + path );
+			www.LoadImageIntoTexture( texture );
+		}
+	}
+
+}
     // Use this for initialization
     void Start()
     {
+
         //find number of lines in file
         int counter = 0;
         int numberoflines;
@@ -110,6 +133,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
             }
         }
         file.Close();
+
 
         //add in  end loop references for easier read in
         int i;
@@ -565,6 +589,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
 
     }
 }
+
 // Debug.Log(" here i = " + i + " jnd = " + jnd + " knd = " +knd +  " check ");
 //Debug.Log("xyzfrac [jnd,0] = " + xyzfrac[jnd, 0]);
 //Debug.Log("SymMatrix[i, knd, 1] = " + SymMatrix[i, knd, 1]);
