@@ -28,7 +28,8 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 
-# Thumbnails
+# Thumb
+nails
 ._*
 
 # Files that might appear in the root of a volume
@@ -47,5 +48,5 @@ Temporary Items
 .apdisk
 
 #Directories created by Unity
-Temp/
-Library/
+Unity_Settings/Temp
+Unity_Settings/Library
