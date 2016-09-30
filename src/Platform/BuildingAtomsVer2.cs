@@ -12,8 +12,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
     private GameObject atom;
     private ArrayList myNodes;
 //added UnityEditor above, also the below script SHOULD open a dialogue box that allows file selection but does not work as yet.
-public class OpenFilePanelExample : EditorWindow
-{
+
 	[MenuItem( "Example/Overwrite Texture" )]
 	static void Apply( )
 	{
@@ -32,10 +31,10 @@ public class OpenFilePanelExample : EditorWindow
 		}
 	}
 
-}
     // Use this for initialization
     void Start()
     {
+    Apply();
 
         //find number of lines in file
         int counter = 0;
