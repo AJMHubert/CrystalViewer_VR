@@ -37,7 +37,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
         // Read the file and count the number of lines.
         System.IO.StreamReader file =
         //new System.IO.StreamReader(@"C:\Users\Alex\Documents\Play\Si.txt");
-        new System.IO.StreamReader(@"C:\Users\JJ\Documents\Alex_crystal_project\CrystalViewer_VR_scripts\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
+        new System.IO.StreamReader(@"C:\Users\JJ\Documents\Alex_crystal_project\CrystalViewer_VR_scripts\src\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
         while ((linedummy = file.ReadLine()) != null)
         {
             counter++;
@@ -57,7 +57,7 @@ public class BuildingAtomsVer2 : MonoBehaviour
             CellAlpha = 0.0F, CellBeta = 0.0F, CellGamma = 0.0F;
 
         // Read in unit cell characteristics
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\JJ\Documents\Alex_crystal_project\CrystalViewer_VR_scripts\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
+        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\JJ\Documents\Alex_crystal_project\CrystalViewer_VR_scripts\src\Demo\Pb2ScTaO6-R3-a+a+a+-antiferro.cif");
         foreach (string line1 in lines)
         {
             string[] text = System.Text.RegularExpressions.Regex.Split(line1, @"\s+");
