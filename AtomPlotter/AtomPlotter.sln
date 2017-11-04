@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomPlotter", "AtomPlotter.csproj", "{477E9EEE-6835-15AF-E38C-E1563FE9A5ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomPlotter.Plugins", "AtomPlotter.Plugins.csproj", "{971D54FA-BF00-9ED8-3ACF-03CACE1B2370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomPlotter.Editor", "AtomPlotter.Editor.csproj", "{7880D3CD-2705-4827-D030-F2F693104913}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{477E9EEE-6835-15AF-E38C-E1563FE9A5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477E9EEE-6835-15AF-E38C-E1563FE9A5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{477E9EEE-6835-15AF-E38C-E1563FE9A5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{477E9EEE-6835-15AF-E38C-E1563FE9A5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971D54FA-BF00-9ED8-3ACF-03CACE1B2370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971D54FA-BF00-9ED8-3ACF-03CACE1B2370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971D54FA-BF00-9ED8-3ACF-03CACE1B2370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971D54FA-BF00-9ED8-3ACF-03CACE1B2370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7880D3CD-2705-4827-D030-F2F693104913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7880D3CD-2705-4827-D030-F2F693104913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7880D3CD-2705-4827-D030-F2F693104913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7880D3CD-2705-4827-D030-F2F693104913}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

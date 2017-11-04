@@ -34,9 +34,8 @@ public class BuildAtoms : MonoBehaviour
             //Read in cell length coordinates
 
             // Read the file and count the number of lines.
-            System.IO.StreamReader file =
-            //new System.IO.StreamReader(@"C:\Users\Alex\Documents\Play\Si.txt");
-            new System.IO.StreamReader(@"C:\Users\Alex\OneDrive - University of Warwick\Work\Production\Cu_DW\Cu_Converge\123\SimCu_123_1000_25\felix.cif");
+            System.IO.StreamReader file = 
+            new StreamReader(@"C:/Users/Alex/Documents/Software/UnityProjects/CrystalViewer_VR/AtomPlotter/GaAs.cif");
             while ((linedummy = file.ReadLine()) != null)
             {
                 counter++;
@@ -56,7 +55,7 @@ public class BuildAtoms : MonoBehaviour
                 CellAlpha = 0.0F, CellBeta = 0.0F, CellGamma = 0.0F;
 
             // Read in unit cell characteristics
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Alex\OneDrive - University of Warwick\Work\Production\Cu_DW\Cu_Converge\123\SimCu_123_1000_25\felix.cif");
+            string[] lines = System.IO.File.ReadAllLines(@"C:/Users/Alex/Documents/Software/UnityProjects/CrystalViewer_VR/AtomPlotter/GaAs.cif");
             foreach (string line1 in lines)
             {
                 string[] text = System.Text.RegularExpressions.Regex.Split(line1, @"\s+");
