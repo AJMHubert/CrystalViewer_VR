@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalViewerVR", "CrystalViewerVR.csproj", "{45FF1041-B550-48F8-89E6-F243C2D0E501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalViewerVR.Plugins", "CrystalViewerVR.Plugins.csproj", "{48AA80AF-4DD1-B0D8-B0AE-F9FDC0FEA04B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrystalViewerVR.Editor", "CrystalViewerVR.Editor.csproj", "{92C0666C-0C02-7BBE-4549-F207AD3EE91F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45FF1041-B550-48F8-89E6-F243C2D0E501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FF1041-B550-48F8-89E6-F243C2D0E501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FF1041-B550-48F8-89E6-F243C2D0E501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45FF1041-B550-48F8-89E6-F243C2D0E501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48AA80AF-4DD1-B0D8-B0AE-F9FDC0FEA04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48AA80AF-4DD1-B0D8-B0AE-F9FDC0FEA04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48AA80AF-4DD1-B0D8-B0AE-F9FDC0FEA04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48AA80AF-4DD1-B0D8-B0AE-F9FDC0FEA04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C0666C-0C02-7BBE-4549-F207AD3EE91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C0666C-0C02-7BBE-4549-F207AD3EE91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C0666C-0C02-7BBE-4549-F207AD3EE91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C0666C-0C02-7BBE-4549-F207AD3EE91F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
